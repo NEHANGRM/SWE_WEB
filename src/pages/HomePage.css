@@ -1,0 +1,215 @@
+.home-content {
+    padding: 20px 40px 100px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header-text h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.header-text p {
+    font-size: 14px;
+    color: var(--text-tertiary);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Overview Grid - 2x2 */
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.overview-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+    gap: 12px;
+}
+
+.stat-icon {
+    font-size: 28px;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-count {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+}
+
+/* Quick Actions Grid - 3x2 */
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.action-card:hover {
+    transform: translateY(-2px);
+}
+
+.action-icon {
+    font-size: 22px;
+}
+
+.action-label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Empty State Card */
+.empty-state-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+}
+
+.check-icon {
+    font-size: 50px;
+    color: var(--success-green);
+    opacity: 0.8;
+}
+
+.empty-state-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.empty-state-card p {
+    color: var(--text-tertiary);
+    font-size: 14px;
+}
+
+/* Next 3 Days row */
+.next-days-row {
+    display: flex;
+    gap: 16px;
+}
+
+.day-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+}
+
+.day-card.today {
+    background: var(--primary-blue) !important;
+    color: white;
+    border: none;
+}
+
+.day-name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.day-number {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.day-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.status-dot {
+    color: var(--success-green);
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+/* FAB */
+.fab-web {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    cursor: pointer;
+    z-index: 1100;
+    transition: transform 0.2s;
+}
+
+.fab-web:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .home-content {
+        padding: 20px 20px 100px 20px;
+    }
+}

@@ -1,0 +1,179 @@
+:root {
+  /* EXACT Flutter Theme Colors - from theme.dart */
+  --primary-blue: #2563EB;
+  --secondary-teal: #14B8A6;
+  --accent-purple: #8B5CF6;
+  --warning-amber: #F59E0B;
+  --success-green: #10B981;
+  --error-red: #EF4444;
+
+  /* Classification Colors */
+  --class-blue: #3B82F6;
+  --exam-orange: #F59E0B;
+  --assignment-purple: #8B5CF6;
+  --meeting-teal: #14B8A6;
+  --personal-green: #10B981;
+  --other-gray: #6B7280;
+
+  /* Neutrals */
+  --bg-primary: #F9FAFB;
+  --bg-secondary: #F3F4F6;
+  --bg-surface: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-tertiary: #9CA3AF;
+  --border-color: #E5E7EB;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+[data-theme='dark'] {
+  --bg-primary: #0F172A;
+  --bg-secondary: #020617;
+  --bg-surface: #1E293B;
+  --text-primary: #F1F5F9;
+  --text-secondary: #CBD5E1;
+  --text-tertiary: #94A3B8;
+  --border-color: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 80px;
+  /* Space for bottom nav */
+  width: 100%;
+}
+
+.card {
+  background: var(--bg-surface);
+  border-radius: 12px;
+  padding: var(--spacing-md);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+/* Custom Bottom Navigation for Web */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: var(--bg-surface);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 150px;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  gap: 4px;
+  transition: all 0.2s;
+  height: 100%;
+}
+
+.nav-item:hover {
+  color: var(--text-secondary);
+}
+
+.nav-item.active {
+  color: var(--secondary-teal);
+}
+
+.nav-item svg {
+  font-size: 22px;
+}
+
+.nav-item span {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Utils */
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-filled {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+.btn-filled:hover {
+  opacity: 0.9;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-small {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.success-text {
+  color: var(--success-green);
+}
